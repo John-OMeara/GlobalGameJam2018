@@ -7,6 +7,9 @@
 
 Game::Game() :
 	m_window{ sf::VideoMode{ 800, 600, 32 }, "SFML Game" },
+	m_menu(),
+	m_cursor(),
+	m_camera(&m_cursor),
 	m_exitGame{false} //when true game will exit
 {
 	setupSprite(); // load texture
@@ -70,6 +73,9 @@ void Game::update(sf::Time t_deltaTime)
 	{
 		m_window.close();
 	}
+
+	m_cursor.update(m_window,m_camera.m_view);
+	m_camera.update();
 }
 
 /// <summary>
@@ -84,6 +90,11 @@ void Game::render()
 
 	m_window.setView(m_window.getDefaultView());
 	m_menu.draw(m_window);
+
+	m_cursor.draw(m_window);
+
+	m_window.setView(m_camera.m_view);
+	m_cursor.draw(m_window);
 
 	m_window.display();
 }

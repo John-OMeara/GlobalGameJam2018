@@ -3,7 +3,8 @@
 /// <summary>
 /// Default constructor for cursor class
 /// </summary>
-Cursor::Cursor()
+Cursor::Cursor() :
+	m_position(sf::Vector2f(0,0))
 {
 	cursorPoint.setFillColor(sf::Color::Transparent);
 	cursorPoint.setRadius(25.f);
@@ -23,11 +24,12 @@ Cursor::~Cursor()
 /// Updates position of cursor and checks
 /// for mouse clicks
 /// </summary>
-void Cursor::update(sf::Window & window)
+void Cursor::update(sf::RenderWindow & window, sf::View gameView)
 {
 	//Set cursor object position to current mouse position
-	m_position.x = m_mouse.getPosition(window).x;
-	m_position.y = m_mouse.getPosition(window).y;
+	//m_position.x = m_mouse.getPosition(window).x;
+	//m_position.y = m_mouse.getPosition(window).y;
+	m_position = sf::Vector2f(window.mapPixelToCoords(sf::Mouse::getPosition(window)));
 
 	//Set circleshape to cursor position
 	cursorPoint.setPosition(m_position);
@@ -36,7 +38,7 @@ void Cursor::update(sf::Window & window)
 /// <summary>
 /// Renders cursor primitive object
 /// </summary>
-void Cursor::render(sf::RenderWindow & window)
+void Cursor::draw(sf::RenderWindow & window)
 {
 	//Draw circleshape to represent cursor
 	window.draw(cursorPoint);
@@ -143,14 +145,4 @@ bool Cursor::checkCollision(float x, float y, float r)
 
 	//Otherwise return false;
 	return false;
-}
-
-/// <summary>
-/// Returns position of cursor relative to the 
-/// screen bounds
-/// </summary>
-/// <returns></returns>
-sf::Vector2f Cursor::getPosition()
-{
-	return m_position;
 }

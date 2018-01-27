@@ -19,6 +19,7 @@ public:
 private:
 	Camera m_camera;
 	Menu m_menu;
+	Cursor m_cursor;
 
 	void processEvents();
 	void update(sf::Time t_deltaTime);

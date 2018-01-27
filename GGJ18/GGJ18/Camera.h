@@ -26,9 +26,8 @@ private:
 	sf::Vector2f m_position;
 	sf::Vector2f m_outputCentre;
 
+	float m_scrollArea;
 
-
-	int m_viewOffset;
 	float m_weight;
 
 	bool m_shaking;

@@ -11,15 +11,17 @@ public:
 	~Cursor();
 
 	//Member functions
-	void update(sf::Window & window);
-	void render(sf::RenderWindow & window);
+	void update(sf::RenderWindow & window, sf::View gameView);
+	void draw(sf::RenderWindow & window);
 	bool checkCollision(sf::Vector2f p, sf::Vector2f s);
 	bool checkCollision(float x, float y, float w, float h);
 	bool checkCollision(sf::Vector2f p, float r);
 	bool checkCollision(float x, float y, float r);
 
 	//Getters - Setters
-	sf::Vector2f getPosition();
+	sf::Vector2f getPosition() {
+		return m_position;
+	}
 
 private:
 	//Member attributes
