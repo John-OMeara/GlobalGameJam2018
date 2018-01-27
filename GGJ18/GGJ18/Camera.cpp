@@ -32,8 +32,7 @@ void Camera::update()
 
 	m_outputCentre = m_position;
 
-	//m_view.setCenter(m_position);
-
+	m_view.setCenter(m_position);
 
 	m_view.setRotation(0);
 	if (m_shaking)
@@ -48,8 +47,7 @@ void Camera::update()
 		m_view.setRotation(m_angle);
 	}
 
-
-	//m_view.setCenter(m_outputCentre);
+	m_view.setCenter(m_outputCentre);
 }
 
 void Camera::render(sf::RenderWindow &window)

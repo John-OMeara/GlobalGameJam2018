@@ -7,6 +7,8 @@
 #include "Camera.h"
 #include "Menu.h"
 #include "Cursor.h"
+#include "Building.h"
+#include "House.h"
 
 class Game
 {
