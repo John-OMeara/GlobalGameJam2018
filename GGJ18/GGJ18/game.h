@@ -22,6 +22,9 @@ private:
 	Camera m_camera;
 	Menu m_menu;
 	Cursor m_cursor;
+	std::vector<House * > houses;
+	sf::Texture house_tex;
+
 
 	void processEvents();
 	void update(sf::Time t_deltaTime);
