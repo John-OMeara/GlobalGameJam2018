@@ -96,19 +96,13 @@ void Game::render()
 
 	m_window.setView(m_camera.m_view);
 	m_window.draw(m_logoSprite);
-
-	m_window.setView(m_window.getDefaultView());
-	m_menu.draw(m_window);
-
-	m_cursor.draw(m_window);
-
-	m_window.setView(m_camera.m_view);
-	m_cursor.draw(m_window);
-
 	for (int i = 0; i < houses.size(); i++)
 	{
 		houses.at(i)->draw(m_window);
 	}
+
+	m_window.setView(m_window.getDefaultView());
+	m_menu.draw(m_window);
 
 	m_window.display();
 }

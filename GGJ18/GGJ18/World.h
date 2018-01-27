@@ -1,6 +1,8 @@
 #ifndef WORLD_H
 #define WORLD_H
 
+#include <SFML\Graphics.hpp>
+
 class World
 {
 public:
@@ -12,8 +14,8 @@ public:
 	void draw();
 
 private:
-
-
+	sf::Texture m_backgroundTexture;
+	sf::Sprite m_backgroundSprite;
 };
 
 #endif // !WORLD_H

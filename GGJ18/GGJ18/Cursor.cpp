@@ -44,6 +44,7 @@ void Cursor::draw(sf::RenderWindow & window)
 	window.draw(cursorPoint);
 }
 
+
 /// <summary>
 /// Performs AABB collision check to
 /// see if object was clicked
