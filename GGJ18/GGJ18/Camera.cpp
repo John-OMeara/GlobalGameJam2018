@@ -33,9 +33,9 @@ void Camera::update()
 	m_outputCentre = m_position;
 
 	//m_view.setCenter(m_position);
+
+
 	m_view.setRotation(0);
-
-
 	if (m_shaking)
 	{
 		m_angle = m_maxAngle * m_shake * (((float)rand()) / RAND_MAX * 100.0 - 50.0);
