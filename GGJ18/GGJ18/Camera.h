@@ -1,4 +1,5 @@
 #ifndef CAMERA_H
+#define CAMERA_H
 
 #include <iostream>
 #include <SFML/Graphics.hpp>
@@ -16,7 +17,6 @@ public:
 	void update();
 
 	sf::View m_view;
-	sf::View m_miniMap;
 
 	void render(sf::RenderWindow &window);
 
@@ -26,7 +26,7 @@ private:
 	sf::Vector2f m_position;
 	sf::Vector2f m_outputCentre;
 
-	sf::FloatRect m_playerBoundary;
+
 
 	int m_viewOffset;
 	float m_weight;

@@ -13,10 +13,9 @@ Camera::Camera(Cursor* cursor)
 
 void Camera::init()
 {
-	m_view.setSize(sf::Vector2f(800, 800));
-	m_view.zoom(0.2);
-
-	m_miniMap.setViewport(sf::FloatRect(0.1, 0.7, 0.3, 0.3));
+	m_view.setSize(sf::Vector2f(700, 600));
+	//m_view.zoom(0.2);
+	m_view.setViewport(sf::FloatRect(0, 0, 0.8, 1));
 
 	m_weight = 0.1;
 	m_shake = 0.1;

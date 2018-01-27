@@ -1,4 +1,5 @@
 #ifndef CURSOR_H
+#define CURSOR_H
 
 #include <SFML/Graphics.hpp>
 
@@ -6,10 +7,10 @@ class Cursor
 {
 public:
 	sf::Vector2f getPosition() {
-		return m_position;
+		return sf::Vector2f(0,0);
 	}
 	float getRotation() {
-		return m_rotation;
+		return 0;
 	}
 
 private:

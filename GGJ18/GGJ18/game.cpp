@@ -78,8 +78,13 @@ void Game::update(sf::Time t_deltaTime)
 void Game::render()
 {
 	m_window.clear(sf::Color::White);
-	m_window.draw(m_welcomeMessage);
+
+	m_window.setView(m_camera.m_view);
 	m_window.draw(m_logoSprite);
+
+	m_window.setView(m_window.getDefaultView());
+	m_menu.draw(m_window);
+
 	m_window.display();
 }
 
