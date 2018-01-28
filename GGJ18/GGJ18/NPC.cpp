@@ -6,17 +6,17 @@ NPC::NPC()
 	/* initialize random seed: */
 	srand(time(NULL));
 	setPostion(m_position);
-	 setupSprite();
+	setupSprite();
 	//m_NPC.setFillColor(sf::Color::Red);
 	//m_NPC.setOutlineColor(sf::Color::Green);
 	m_NPC.setSize(m_size);
-	m_NPC.setOrigin(m_size.x/2, m_size.y/2);
+	m_NPC.setOrigin(m_size.x / 2, m_size.y / 2);
 
 	m_NPCRadius.setFillColor(sf::Color::Transparent); //remove all
 	m_NPCRadius.setRadius(m_infectionRadius);
 	m_NPCRadius.setOutlineColor(sf::Color::Red);
 	m_NPCRadius.setOutlineThickness(5.f);
-	m_NPCRadius.setOrigin(m_infectionRadius,m_infectionRadius);
+	m_NPCRadius.setOrigin(m_infectionRadius, m_infectionRadius);
 
 
 
@@ -75,7 +75,7 @@ void NPC::setupSprite()
 			std::cout << "problem loading file: " << __FILE__ << ":" << __LINE__ << std::endl;
 		}
 	}
-	
+
 	m_NPC.setTexture(&m_npcTexture);
 }
 
@@ -84,16 +84,21 @@ sf::Vector2f NPC::setRandPoint()
 	m_endPostion.x = rand() % 800;
 	m_endPostion.y = rand() % 600;
 
-	
+
 	return m_endPostion;
+}
+
+void NPC::setPoisoned(bool c)
+{
+	m_infected = c;
 }
 
 
 void NPC::setPostion(sf::Vector2f pos)
 {
-	
-	
-	m_dest.x = m_endPostion.x - m_position.x  ;
+
+
+	m_dest.x = m_endPostion.x - m_position.x;
 	m_dest.y = m_endPostion.y - m_position.y;
 
 	m_dist = sqrt((m_dest.x*m_dest.x) + (m_dest.y * m_dest.y));
@@ -106,10 +111,10 @@ void NPC::setPostion(sf::Vector2f pos)
 		m_position.x += m_velocity.x;
 		m_position.y += m_velocity.y;
 	}
-	else 
+	else
 	{
 		m_endPostion = setRandPoint();
 	}
 	m_NPC.setPosition(pos);
-	
+
 }

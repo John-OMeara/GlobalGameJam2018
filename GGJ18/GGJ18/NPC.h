@@ -21,7 +21,7 @@ public:
 	bool checkCollision(float x, float y, float w, float h);
 	void setupSprite(); // load texture
 	sf::Vector2f setRandPoint();
-
+	void setPoisoned(bool c);
 
 	//Getters - Setters
 	sf::Vector2f getPosition() {
@@ -34,7 +34,7 @@ private:
 	sf::RectangleShape m_NPC;
 	sf::CircleShape m_NPCRadius;
 
-		//Member attributes
+	//Member attributes
 	sf::Vector2f m_position{ 0,0 };
 	sf::Vector2f m_endPostion{ 400,400 };
 	sf::Vector2f m_detination;
@@ -50,7 +50,7 @@ private:
 	float m_infectionRadius = 80;
 
 	sf::Texture m_npcTexture;
-	
+
 
 };
 
