@@ -2,28 +2,41 @@
 
 NPC::NPC()
 {
-	
+	//	setupSprite();
 	/* initialize random seed: */
 	srand(time(NULL));
-	m_position.x = rand() % 800;
-	m_position.y = rand() % 600;
-	setRandPoint();
-
 	setPostion(m_position);
-
-	 setupSprite();
-	//m_NPC.setFillColor(sf::Color::Red);
-	//m_NPC.setOutlineColor(sf::Color::Green);
-	m_NPC.setSize(m_size);
-	m_NPC.setOrigin(m_size.x/2, m_size.y/2);
+	m_NPC.setFillColor(sf::Color::Red);
+	m_NPC.setRadius(m_radius);
+	m_NPC.setOrigin(m_radius, m_radius);
+	m_NPC.setOutlineColor(sf::Color::Green);
+	m_NPC.setOutlineThickness(5.f);
 
 	m_NPCRadius.setFillColor(sf::Color::Transparent); //remove all
 	m_NPCRadius.setRadius(m_infectionRadius);
+	m_NPCRadius.setOrigin(m_infectionRadius, m_infectionRadius);
 	m_NPCRadius.setOutlineColor(sf::Color::Red);
 	m_NPCRadius.setOutlineThickness(5.f);
-	m_NPCRadius.setOrigin(m_infectionRadius,m_infectionRadius);
+}
 
+NPC::NPC(std::vector<House*>* houses) :
+	m_houses(houses)
+{
+	//	setupSprite();
+	/* initialize random seed: */
+	srand(time(NULL));
+	setPostion(m_position);
+	m_NPC.setFillColor(sf::Color::Red);
+	m_NPC.setRadius(m_radius);
+	m_NPC.setOrigin(m_radius, m_radius);
+	m_NPC.setOutlineColor(sf::Color::Green);
+	m_NPC.setOutlineThickness(5.f);
 
+	m_NPCRadius.setFillColor(sf::Color::Transparent); //remove all
+	m_NPCRadius.setRadius(m_infectionRadius);
+	m_NPCRadius.setOrigin(m_infectionRadius, m_infectionRadius);
+	m_NPCRadius.setOutlineColor(sf::Color::Red);
+	m_NPCRadius.setOutlineThickness(5.f);
 
 }
 
@@ -33,80 +46,41 @@ NPC::~NPC()
 
 void NPC::update()
 {
-	checkInfection();
+
 	setPostion(m_position);
+	m_npcSprite.setPosition(m_position);//remove
 	m_NPCRadius.setPosition(m_position);
-	
+
 }
 
 void NPC::draw(sf::RenderWindow & window)
 {
 	window.draw(m_NPC);
 	window.draw(m_NPCRadius);
-
-
 }
 
+bool NPC::checkCollision(float x, float y, float w, float h)
+{
+	return false;
+}
 
 void NPC::setupSprite()
 {
-	int randTexture = rand() % 2;
-
-	if (randTexture == 0)
+	if (!m_npcTexture.loadFromFile("./ASSETS/IMAGES/SFML-LOGO.png"))
 	{
-		if (!m_npcTexture.loadFromFile("./ASSETS/IMAGES/meeple1.png"))
-		{
-			// simple error message if previous call fails
-			std::cout << "problem loading file: " << __FILE__ << ":" << __LINE__ << std::endl;
-		}
+		// simple error message if previous call fails
+		std::cout << "problem loading file: " << __FILE__ << ":" << __LINE__ << std::endl;
 	}
-	else if (randTexture == 1)
-	{
-		if (!m_npcTexture.loadFromFile("./ASSETS/IMAGES/meeple2.png"))
-		{
-			// simple error message if previous call fails
-			std::cout << "problem loading file: " << __FILE__ << ":" << __LINE__ << std::endl;
-		}
-	}
-	else if (randTexture == 2)
-	{
-		if (!m_npcTexture.loadFromFile("./ASSETS/IMAGES/meeple3.png"))
-		{
-			// simple error message if previous call fails
-			std::cout << "problem loading file: " << __FILE__ << ":" << __LINE__ << std::endl;
-		}
-	}
-	
-	m_NPC.setTexture(&m_npcTexture);
+	m_npcSprite.setTexture(m_npcTexture);
 }
 
 sf::Vector2f NPC::setRandPoint()
 {
-	m_endPostion.x = rand() % 800;
-	m_endPostion.y = rand() % 600;
+	int dest = rand() % m_houses->size();
 
-	
-	return m_endPostion;
+	return m_houses->at(dest)->getPosition();
 }
 
-void NPC::setInfected()
-{
-	m_infected = true;
-}
-
-void NPC::checkInfection()
-{
-	if (m_infected == true);
-	{
-		m_NPC.setFillColor(sf::Color::Green);
-	}
-}
-
-
-sf::Vector2f NPC::getPosition()
-{
-	return m_position;
-}
 
 void NPC::setPostion(sf::Vector2f pos)
 {
@@ -127,6 +101,15 @@ void NPC::setPostion(sf::Vector2f pos)
 	}
 	else 
 	{
+		/*
+		
+		if (house.at(dest).isInfected)
+		{
+			infected = true;
+		}
+		
+		
+		*/
 		m_endPostion = setRandPoint();
 	}
 	m_NPC.setPosition(pos);
