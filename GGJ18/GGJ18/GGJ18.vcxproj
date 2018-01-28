@@ -27,6 +27,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="NPC.cpp" />
+    <ClCompile Include="Well.cpp" />
     <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -37,6 +38,7 @@
     <ClInclude Include="House.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="NPC.h" />
+    <ClInclude Include="Well.h" />
     <ClInclude Include="World.h" />
   </ItemGroup>
   <ItemGroup>

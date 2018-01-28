@@ -93,19 +93,11 @@ void Game::render()
 	m_world.draw(m_window);
 	m_npc.draw(m_window);//remove
 
-
-
 	m_window.setView(m_window.getDefaultView());
 	m_menu.draw(m_window);
-
-=======
-
-
-
 
 	m_window.setView(m_camera.m_view);
 	m_cursor.draw(m_window);
 
->>>>>>> Merging Player_branch and Master
 	m_window.display();
 }

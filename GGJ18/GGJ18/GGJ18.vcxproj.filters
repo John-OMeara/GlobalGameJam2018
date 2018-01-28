@@ -1,103 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Resource Files\ASSETS">
-      <UniqueIdentifier>{46b02c78-bcd2-411b-9255-1d7aed5884c9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\ASSETS\FONTS">
-      <UniqueIdentifier>{b5e82806-bf9b-4fdf-b17c-c35282c021a5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\ASSETS\IMAGES">
-      <UniqueIdentifier>{1d793ccc-0d22-4eea-8d0e-c5b5a5270a40}</UniqueIdentifier>
-    </Filter>
+    <ClCompile Include="Building.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Cursor.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="House.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="NPC.cpp" />
+    <ClCompile Include="World.cpp" />
+    <ClCompile Include="Well.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Camera.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Cursor.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Menu.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="World.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    <ClCompile Include="Building.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="House.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
->>>>>>> Added World class, Building super, and house sub class
-=======
-    <ClCompile Include="NPC.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
->>>>>>> Merging Player_branch and Master
+    <ClInclude Include="Building.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Cursor.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="House.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="NPC.h" />
+    <ClInclude Include="World.h" />
+    <ClInclude Include="Well.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Camera.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Cursor.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Menu.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="World.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    <ClInclude Include="Building.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="House.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
->>>>>>> Added World class, Building super, and house sub class
-=======
-    <ClInclude Include="NPC.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
->>>>>>> Merging Player_branch and Master
+    <Image Include="..\..\..\..\..\pictures\SFML-LOGO.png" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\..\..\..\pictures\SFML-LOGO.png">
-      <Filter>Resource Files\ASSETS\IMAGES</Filter>
-    </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <Font Include="ASSETS\FONTS\ariblk.ttf">
-      <Filter>Resource Files\ASSETS\FONTS</Filter>
-    </Font>
+    <Font Include="ASSETS\FONTS\ariblk.ttf" />
   </ItemGroup>
 </Project>
