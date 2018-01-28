@@ -76,10 +76,11 @@ void Game::update(sf::Time t_deltaTime)
 		m_window.close();
 	}
 
+	
+
 	m_cursor.update(m_window,m_camera.m_view);
 	m_camera.update();
 	m_npc.update();//remove
-	
 }
 
 /// <summary>

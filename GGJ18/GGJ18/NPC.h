@@ -21,7 +21,7 @@ public:
 	bool checkCollision(float x, float y, float w, float h);
 	void setupSprite(); // load texture
 	sf::Vector2f setRandPoint();
-
+	void setPoisoned(bool c);
 
 	//Getters - Setters
 	sf::Vector2f getPosition() {

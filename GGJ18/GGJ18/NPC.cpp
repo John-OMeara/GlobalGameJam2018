@@ -65,6 +65,11 @@ sf::Vector2f NPC::setRandPoint()
 	return m_endPostion;
 }
 
+void NPC::setPoisoned(bool c)
+{
+	m_infected = c;
+}
+
 
 void NPC::setPostion(sf::Vector2f pos)
 {
