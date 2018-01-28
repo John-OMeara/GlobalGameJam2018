@@ -31,23 +31,26 @@ public:
 
 private:
 
-	sf::CircleShape m_NPC;
+	sf::RectangleShape m_NPC;
 	sf::CircleShape m_NPCRadius;
+
 		//Member attributes
 	sf::Vector2f m_position{ 0,0 };
 	sf::Vector2f m_endPostion{ 400,400 };
 	sf::Vector2f m_detination;
 	sf::Vector2f m_velocity{ 0,0 };
 	float m_speed = 5;
+
 	bool m_infected;
 	bool m_reachedEnd = false;
+
 	sf::Vector2f m_dest{ 0,0 };
 	float m_dist;
-	float  m_radius = 20;
-	float m_infectionRadius = 40;
+	sf::Vector2f  m_size{ 40,40 };
+	float m_infectionRadius = 80;
 
 	sf::Texture m_npcTexture;
-	sf::Sprite m_npcSprite;
+	
 
 };
 

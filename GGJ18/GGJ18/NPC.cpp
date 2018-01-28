@@ -6,11 +6,11 @@ NPC::NPC()
 	/* initialize random seed: */
 	srand(time(NULL));
 	setPostion(m_position);
-	m_NPC.setFillColor(sf::Color::Red);
-	m_NPC.setRadius(m_radius);
-	m_NPC.setOutlineColor(sf::Color::Green);
-	m_NPC.setOutlineThickness(5.f);
-	m_NPC.setOrigin(m_radius,m_radius);
+	 setupSprite();
+	//m_NPC.setFillColor(sf::Color::Red);
+	//m_NPC.setOutlineColor(sf::Color::Green);
+	m_NPC.setSize(m_size);
+	m_NPC.setOrigin(m_size.x/2, m_size.y/2);
 
 	m_NPCRadius.setFillColor(sf::Color::Transparent); //remove all
 	m_NPCRadius.setRadius(m_infectionRadius);
@@ -30,7 +30,6 @@ void NPC::update()
 {
 
 	setPostion(m_position);
-	m_npcSprite.setPosition(m_position);//remove
 	m_NPCRadius.setPosition(m_position);
 
 }
@@ -39,6 +38,8 @@ void NPC::draw(sf::RenderWindow & window)
 {
 	window.draw(m_NPC);
 	window.draw(m_NPCRadius);
+
+
 }
 
 bool NPC::checkCollision(float x, float y, float w, float h)
@@ -48,12 +49,34 @@ bool NPC::checkCollision(float x, float y, float w, float h)
 
 void NPC::setupSprite()
 {
-	if (!m_npcTexture.loadFromFile("./ASSETS/IMAGES/SFML-LOGO.png"))
+	int randTexture = rand() % 2;
+
+	if (randTexture == 0)
 	{
-		// simple error message if previous call fails
-		std::cout << "problem loading file: " << __FILE__ << ":" << __LINE__ << std::endl;
+		if (!m_npcTexture.loadFromFile("./ASSETS/IMAGES/meeple1.png"))
+		{
+			// simple error message if previous call fails
+			std::cout << "problem loading file: " << __FILE__ << ":" << __LINE__ << std::endl;
+		}
 	}
-	m_npcSprite.setTexture(m_npcTexture);
+	else if (randTexture == 1)
+	{
+		if (!m_npcTexture.loadFromFile("./ASSETS/IMAGES/meeple2.png"))
+		{
+			// simple error message if previous call fails
+			std::cout << "problem loading file: " << __FILE__ << ":" << __LINE__ << std::endl;
+		}
+	}
+	else if (randTexture == 2)
+	{
+		if (!m_npcTexture.loadFromFile("./ASSETS/IMAGES/meeple3.png"))
+		{
+			// simple error message if previous call fails
+			std::cout << "problem loading file: " << __FILE__ << ":" << __LINE__ << std::endl;
+		}
+	}
+	
+	m_NPC.setTexture(&m_npcTexture);
 }
 
 sf::Vector2f NPC::setRandPoint()
@@ -74,10 +97,6 @@ void NPC::setPostion(sf::Vector2f pos)
 	m_dest.y = m_endPostion.y - m_position.y;
 
 	m_dist = sqrt((m_dest.x*m_dest.x) + (m_dest.y * m_dest.y));
-
-
-
-		
 
 	if (m_dist >= 5)
 	{
