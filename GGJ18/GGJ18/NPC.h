@@ -18,15 +18,12 @@ public:
 	//Member functions
 	void update();
 	void draw(sf::RenderWindow & window);
-	bool checkCollision(float x, float y, float w, float h);
 	void setupSprite(); // load texture
 	sf::Vector2f setRandPoint();
-
-
+	void setInfected();
+	void checkInfection();
 	//Getters - Setters
-	sf::Vector2f getPosition() {
-		return m_position;
-	}
+	sf::Vector2f getPosition();
 	void setPostion(sf::Vector2f pos);
 
 private:
@@ -35,19 +32,19 @@ private:
 	sf::CircleShape m_NPCRadius;
 
 		//Member attributes
-	sf::Vector2f m_position{ 0,0 };
-	sf::Vector2f m_endPostion{ 400,400 };
+	sf::Vector2f m_position;
+	sf::Vector2f m_endPostion;
 	sf::Vector2f m_detination;
 	sf::Vector2f m_velocity{ 0,0 };
 	float m_speed = 5;
 
-	bool m_infected;
+	bool m_infected  ;
 	bool m_reachedEnd = false;
 
 	sf::Vector2f m_dest{ 0,0 };
 	float m_dist;
 	sf::Vector2f  m_size{ 40,40 };
-	float m_infectionRadius = 80;
+	float m_infectionRadius = 50;
 
 	sf::Texture m_npcTexture;
 	

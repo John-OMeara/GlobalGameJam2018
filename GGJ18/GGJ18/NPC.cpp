@@ -2,10 +2,15 @@
 
 NPC::NPC()
 {
-	//	setupSprite();
+	
 	/* initialize random seed: */
 	srand(time(NULL));
+	m_position.x = rand() % 800;
+	m_position.y = rand() % 600;
+	setRandPoint();
+
 	setPostion(m_position);
+
 	 setupSprite();
 	//m_NPC.setFillColor(sf::Color::Red);
 	//m_NPC.setOutlineColor(sf::Color::Green);
@@ -28,10 +33,10 @@ NPC::~NPC()
 
 void NPC::update()
 {
-
+	checkInfection();
 	setPostion(m_position);
 	m_NPCRadius.setPosition(m_position);
-
+	
 }
 
 void NPC::draw(sf::RenderWindow & window)
@@ -42,10 +47,6 @@ void NPC::draw(sf::RenderWindow & window)
 
 }
 
-bool NPC::checkCollision(float x, float y, float w, float h)
-{
-	return false;
-}
 
 void NPC::setupSprite()
 {
@@ -88,6 +89,24 @@ sf::Vector2f NPC::setRandPoint()
 	return m_endPostion;
 }
 
+void NPC::setInfected()
+{
+	m_infected = true;
+}
+
+void NPC::checkInfection()
+{
+	if (m_infected == true);
+	{
+		m_NPC.setFillColor(sf::Color::Green);
+	}
+}
+
+
+sf::Vector2f NPC::getPosition()
+{
+	return m_position;
+}
 
 void NPC::setPostion(sf::Vector2f pos)
 {
