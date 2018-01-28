@@ -12,7 +12,6 @@ Game::Game() :
 	m_camera(&m_cursor),
 	m_exitGame{false} //when true game will exit
 {
-	setupSprite(); // load texture
 
     //Load image tild for texture
 	if (!house_tex.loadFromFile(".\\ASSETS\\IMAGES\\House.png"))
@@ -92,10 +91,9 @@ void Game::update(sf::Time t_deltaTime)
 /// </summary>
 void Game::render()
 {
-	m_window.clear(sf::Color::White);
+	m_window.clear(sf::Color(245,245,220));
 
 	m_window.setView(m_camera.m_view);
-	m_window.draw(m_logoSprite);
 	for (int i = 0; i < houses.size(); i++)
 	{
 		houses.at(i)->draw(m_window);
@@ -105,18 +103,4 @@ void Game::render()
 	m_menu.draw(m_window);
 
 	m_window.display();
-}
-
-
-/// <summary>
-/// load the texture and setup the sprite for the logo
-/// </summary>
-void Game::setupSprite()
-{
-	if (!m_logoTexture.loadFromFile("./ASSETS/IMAGES/TESTMAP.png"))
-	{
-		// simple error message if previous call fails
-		std::cout << "problem loading file: " << __FILE__ << ":" << __LINE__ << std::endl;
-	}
-	m_logoSprite.setTexture(m_logoTexture);
 }

@@ -27,6 +27,7 @@ private:
 	sf::Vector2f m_outputCentre;
 
 	float m_scrollArea;
+	float m_scrollSpeed;
 
 	float m_weight;
 
