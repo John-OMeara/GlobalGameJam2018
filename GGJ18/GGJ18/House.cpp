@@ -15,12 +15,3 @@ House::House(sf::Texture t, sf::Vector2f p):
 House::~House()
 {
 }
-
-/// <summary>
-/// 
-/// </summary>
-/// <returns></returns>
-sf::Vector2f House::getPosition()
-{
-	return m_position;
-}

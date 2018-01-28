@@ -25,7 +25,7 @@ protected:
 	sf::Texture m_texture;
 	sf::Vector2f m_position;
 	sf::Vector2f m_size; //Texture globalBounds
-
+	
 private:
 
 };
