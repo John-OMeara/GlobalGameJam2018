@@ -4,6 +4,7 @@
 
 #include <SFML/Graphics.hpp>
 
+#include "World.h"
 #include "Camera.h"
 #include "Menu.h"
 #include "Cursor.h"
@@ -20,11 +21,9 @@ public:
 
 private:
 	Camera m_camera;
+	World m_world;
 	Menu m_menu;
 	Cursor m_cursor;
-	std::vector<House * > houses;
-	sf::Texture house_tex;
-
 
 	void processEvents();
 	void update(sf::Time t_deltaTime);

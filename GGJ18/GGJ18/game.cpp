@@ -13,14 +13,7 @@ Game::Game() :
 	m_exitGame{false} //when true game will exit
 {
 
-    //Load image tild for texture
-	if (!house_tex.loadFromFile(".\\ASSETS\\IMAGES\\House.png"))
-	{
-		//Error message for file loading failure
-		std::cout << "ERROR: Failed to load file: " << __FILE__ << " at line : " << __LINE__ << std::endl;
-	}
-
-	houses.push_back(new House(house_tex, sf::Vector2f(200, 200)));
+    
 }
 
 
@@ -94,10 +87,8 @@ void Game::render()
 	m_window.clear(sf::Color(245,245,220));
 
 	m_window.setView(m_camera.m_view);
-	for (int i = 0; i < houses.size(); i++)
-	{
-		houses.at(i)->draw(m_window);
-	}
+	m_world.draw(m_window);
+
 
 	m_window.setView(m_window.getDefaultView());
 	m_menu.draw(m_window);

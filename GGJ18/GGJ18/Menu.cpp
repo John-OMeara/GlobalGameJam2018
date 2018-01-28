@@ -71,7 +71,7 @@ void Menu::update()
 
 void Menu::draw(sf::RenderWindow & window)
 {
-	window.draw(m_placeholder);
+	//window.draw(m_placeholder);
 	window.draw(m_buttonOne);
 	window.draw(m_buttonTwo);
 	window.draw(m_buttonThree);
