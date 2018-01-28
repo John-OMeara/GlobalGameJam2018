@@ -27,8 +27,9 @@ Cursor::~Cursor()
 void Cursor::update(sf::RenderWindow & window, sf::View gameView)
 {
 	//Set cursor object position to current mouse position
-	//m_position.x = m_mouse.getPosition(window).x;
-	//m_position.y = m_mouse.getPosition(window).y;
+	m_screenPosition.x = m_mouse.getPosition(window).x;
+	m_screenPosition.y = m_mouse.getPosition(window).y;
+
 	m_position = sf::Vector2f(window.mapPixelToCoords(sf::Mouse::getPosition(window)));
 
 	//Set circleshape to cursor position

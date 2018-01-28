@@ -1,7 +1,7 @@
 #include "World.h"
 
 World::World() :
-	m_houseCount(10)
+	m_houseCount(15)
 {
 	//Load image tild for texture
 	if (!house_tex.loadFromFile(".\\ASSETS\\IMAGES\\House.png"))

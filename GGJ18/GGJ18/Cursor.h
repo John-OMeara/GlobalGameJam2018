@@ -22,10 +22,14 @@ public:
 	sf::Vector2f getPosition() {
 		return m_position;
 	}
+	sf::Vector2f getScreenPosition() {
+		return m_screenPosition;
+	}
 
 private:
 	//Member attributes
 	sf::Vector2f m_position;
+	sf::Vector2f m_screenPosition;
 	sf::CircleShape cursorPoint;
 	sf::Mouse m_mouse;
 };

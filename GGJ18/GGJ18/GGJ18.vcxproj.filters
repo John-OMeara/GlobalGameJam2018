@@ -1,39 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="Building.cpp" />
-    <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="Cursor.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="House.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Menu.cpp" />
-<<<<<<< HEAD
-    <ClCompile Include="NPC.cpp" />
-=======
->>>>>>> building_branch
-    <ClCompile Include="World.cpp" />
-    <ClCompile Include="Well.cpp" />
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\ASSETS">
+      <UniqueIdentifier>{46b02c78-bcd2-411b-9255-1d7aed5884c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\ASSETS\FONTS">
+      <UniqueIdentifier>{b5e82806-bf9b-4fdf-b17c-c35282c021a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\ASSETS\IMAGES">
+      <UniqueIdentifier>{1d793ccc-0d22-4eea-8d0e-c5b5a5270a40}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <ClInclude Include="Building.h" />
-    <ClInclude Include="Camera.h" />
-    <ClInclude Include="Cursor.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="House.h" />
-    <ClInclude Include="Menu.h" />
-    <ClInclude Include="NPC.h" />
-    <ClInclude Include="World.h" />
-    <ClInclude Include="Well.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\..\..\..\..\pictures\SFML-LOGO.png" />
-  </ItemGroup>
-  <ItemGroup>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -99,37 +89,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
 >>>>>>> Merging Player_branch and Master
-=======
-    <ClInclude Include="Building.h" />
-    <ClInclude Include="Camera.h" />
-    <ClInclude Include="Cursor.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="House.h" />
-    <ClInclude Include="Menu.h" />
-    <ClInclude Include="World.h" />
-    <ClInclude Include="Well.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\..\..\..\pictures\SFML-LOGO.png" />
->>>>>>> Added well class
+    <Image Include="..\..\..\..\..\pictures\SFML-LOGO.png">
+      <Filter>Resource Files\ASSETS\IMAGES</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
-=======
-    <ClInclude Include="Building.h" />
-    <ClInclude Include="Camera.h" />
-    <ClInclude Include="Cursor.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="House.h" />
-    <ClInclude Include="Menu.h" />
-    <ClInclude Include="World.h" />
-    <ClInclude Include="Well.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\..\..\..\..\pictures\SFML-LOGO.png" />
-  </ItemGroup>
-  <ItemGroup>
->>>>>>> 3024a6954d90cbd7fdb5ad5e1b749238dbcb7faa
->>>>>>> building_branch
-    <Font Include="ASSETS\FONTS\ariblk.ttf" />
+    <Font Include="ASSETS\FONTS\ariblk.ttf">
+      <Filter>Resource Files\ASSETS\FONTS</Filter>
+    </Font>
   </ItemGroup>
 </Project>

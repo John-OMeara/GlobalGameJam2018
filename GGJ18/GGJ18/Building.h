@@ -14,18 +14,15 @@ public:
 	//Member functions
 	void update();
 	void draw(sf::RenderWindow & window);
-	bool withinRadius(sf::Vector2f p);
-	void addNPC(/*NPC * n*/);
 
 	//Getters - Setters
-	sf::Vector2f getPosition();
 
 protected:
 	sf::Sprite m_sprite;
 	sf::Texture m_texture;
 	sf::Vector2f m_position;
 	sf::Vector2f m_size; //Texture globalBounds
-	
+
 private:
 
 };

@@ -13,6 +13,7 @@ public:
 	//Member functions
 
 	//Getters - Setters
+	sf::Vector2f getPosition();
 
 private:
 
