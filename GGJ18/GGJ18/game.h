@@ -24,11 +24,13 @@ private:
 	Cursor m_cursor;
 	std::vector<House * > houses;
 	sf::Texture house_tex;
-
+	sf::Texture hosp_tex;
+	sf::Texture tav_tex;
 
 	void processEvents();
 	void update(sf::Time t_deltaTime);
 	void render();
+	void loadFiles();
 	
 	void setupSprite();
 

@@ -4,7 +4,9 @@
 #include <iostream>
 
 
-
+/// <summary>
+/// Game class constructor function
+/// </summary>
 Game::Game() :
 	m_window{ sf::VideoMode{ 800, 600, 32 }, "SFML Game" },
 	m_menu(),
@@ -13,23 +15,23 @@ Game::Game() :
 	m_exitGame{false} //when true game will exit
 {
 	setupSprite(); // load texture
-
-    //Load image tild for texture
-	if (!house_tex.loadFromFile(".\\ASSETS\\IMAGES\\House.png"))
-	{
-		//Error message for file loading failure
-		std::cout << "ERROR: Failed to load file: " << __FILE__ << " at line : " << __LINE__ << std::endl;
-	}
-
+	loadFiles();
+    
 	houses.push_back(new House(house_tex, sf::Vector2f(200, 200)));
+	houses.push_back(new House(hosp_tex, sf::Vector2f(300, 500)));
+	houses.push_back(new House(tav_tex, sf::Vector2f(600, 300)));
 }
 
-
+/// <summary>
+/// 
+/// </summary>
 Game::~Game()
 {
 }
 
-
+/// <summary>
+/// 
+/// </summary>
 void Game::run()
 {
 	sf::Clock clock;
@@ -105,12 +107,37 @@ void Game::render()
 	m_window.setView(m_camera.m_view);
 	m_cursor.draw(m_window);
 
-	for (int i = 0; i < houses.size(); i++)
+	for (int i = 0; i < houses.size(); i++) 
 	{
 		houses.at(i)->draw(m_window);
 	}
 
 	m_window.display();
+}
+
+/// <summary>
+/// Loads in images and other files
+/// </summary>
+void Game::loadFiles()
+{
+	//Load image tild for texture
+	if (!house_tex.loadFromFile(".\\ASSETS\\IMAGES\\House.png"))
+	{
+		//Error message for file loading failure
+		std::cout << "ERROR: Failed to load file: " << __FILE__ << " at line : " << __LINE__ << std::endl;
+	}
+	//Load image tild for texture
+	if (!hosp_tex.loadFromFile(".\\ASSETS\\IMAGES\\Hospital.png"))
+	{
+		//Error message for file loading failure
+		std::cout << "ERROR: Failed to load file: " << __FILE__ << " at line : " << __LINE__ << std::endl;
+	}
+	//Load image tild for texture
+	if (!tav_tex.loadFromFile(".\\ASSETS\\IMAGES\\Tavern.png"))
+	{
+		//Error message for file loading failure
+		std::cout << "ERROR: Failed to load file: " << __FILE__ << " at line : " << __LINE__ << std::endl;
+	}
 }
 
 

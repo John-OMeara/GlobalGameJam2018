@@ -1,16 +1,26 @@
 #include "Camera.h"
 
+/// <summary>
+/// 
+/// </summary>
 Camera::Camera()
 {
 	init();
 }
 
+/// <summary>
+/// 
+/// </summary>
+/// <param name="cursor"></param>
 Camera::Camera(Cursor* cursor)
 	: m_cursor(cursor)
 {
 	init();
 }
 
+/// <summary>
+/// 
+/// </summary>
 void Camera::init()
 {
 	m_view.setSize(sf::Vector2f(800, 600));
@@ -22,7 +32,9 @@ void Camera::init()
 	m_maxOffset = 1;
 }
 
-
+/// <summary>
+/// 
+/// </summary>
 void Camera::update()
 {
 	sf::Vector2f cursorPos = m_cursor->getPosition();
@@ -32,7 +44,7 @@ void Camera::update()
 
 	m_outputCentre = m_position;
 
-	m_view.setCenter(m_position);
+	//m_view.setCenter(m_position);
 
 	m_view.setRotation(0);
 	if (m_shaking)
@@ -47,9 +59,13 @@ void Camera::update()
 		m_view.setRotation(m_angle);
 	}
 
-	m_view.setCenter(m_outputCentre);
+	//m_view.setCenter(m_outputCentre);
 }
 
+/// <summary>
+/// 
+/// </summary>
+/// <param name="window"></param>
 void Camera::render(sf::RenderWindow &window)
 {
 
