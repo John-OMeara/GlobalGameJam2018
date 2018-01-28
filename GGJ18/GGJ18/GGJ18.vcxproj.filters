@@ -13,6 +13,7 @@
   </ItemGroup>
   <ItemGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -93,6 +94,21 @@
 >>>>>>> Added well class
   </ItemGroup>
   <ItemGroup>
+=======
+    <ClInclude Include="Building.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Cursor.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="House.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="World.h" />
+    <ClInclude Include="Well.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\..\pictures\SFML-LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+>>>>>>> 3024a6954d90cbd7fdb5ad5e1b749238dbcb7faa
     <Font Include="ASSETS\FONTS\ariblk.ttf" />
   </ItemGroup>
 </Project>
