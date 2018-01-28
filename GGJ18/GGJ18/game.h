@@ -29,6 +29,15 @@ private:
 	void processEvents();
 	void update(sf::Time t_deltaTime);
 	void render();
+	std::vector<House * > houses;
+	sf::Texture house_tex;
+	sf::Texture hosp_tex;
+	sf::Texture tav_tex;
+
+	void processEvents();
+	void loadFiles();
+	
+	void setupSprite();
 
 	sf::RenderWindow m_window; // main SFML window
 

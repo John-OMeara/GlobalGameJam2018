@@ -1,10 +1,17 @@
 #include "Camera.h"
 
+/// <summary>
+/// 
+/// </summary>
 Camera::Camera()
 {
 	init();
 }
 
+/// <summary>
+/// 
+/// </summary>
+/// <param name="cursor"></param>
 Camera::Camera(Cursor* cursor)
 	: m_cursor(cursor),
 	m_weight(0.1),
@@ -17,13 +24,18 @@ Camera::Camera(Cursor* cursor)
 	init();
 }
 
+/// <summary>
+/// 
+/// </summary>
 void Camera::init()
 {
 	m_view.setSize(sf::Vector2f(800, 600));
 	//m_view.setViewport(sf::FloatRect(0, 0, 1, 1));
 }
 
-
+/// <summary>
+/// 
+/// </summary>
 void Camera::update()
 {
 	sf::Vector2f cursorPos = m_cursor->getPosition();
@@ -55,7 +67,7 @@ void Camera::update()
 
 	m_outputCentre = m_position;
 
-	m_view.setCenter(m_position);
+	//m_view.setCenter(m_position);
 
 	m_view.setRotation(0);
 
@@ -73,9 +85,13 @@ void Camera::update()
 		m_view.setRotation(m_angle);
 	}
 
-	m_view.setCenter(m_outputCentre);
+	//m_view.setCenter(m_outputCentre);
 }
 
+/// <summary>
+/// 
+/// </summary>
+/// <param name="window"></param>
 void Camera::render(sf::RenderWindow &window)
 {
 

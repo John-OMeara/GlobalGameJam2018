@@ -26,7 +26,11 @@
     <ClCompile Include="House.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="NPC.cpp" />
+=======
+    <ClCompile Include="Well.cpp" />
+>>>>>>> Added well class
     <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -36,7 +40,11 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="House.h" />
     <ClInclude Include="Menu.h" />
+<<<<<<< HEAD
     <ClInclude Include="NPC.h" />
+=======
+    <ClInclude Include="Well.h" />
+>>>>>>> Added well class
     <ClInclude Include="World.h" />
   </ItemGroup>
   <ItemGroup>
