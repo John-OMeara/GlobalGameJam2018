@@ -10,7 +10,8 @@ Game::Game() :
 	m_menu(),
 	m_cursor(),
 	m_camera(&m_cursor),
-	m_exitGame{false} //when true game will exit
+	m_npc(),//remove
+	m_exitGame{ false } //when true game will exit
 {
 
     
@@ -77,6 +78,8 @@ void Game::update(sf::Time t_deltaTime)
 
 	m_cursor.update(m_window,m_camera.m_view);
 	m_camera.update();
+	m_npc.update();//remove
+	
 }
 
 /// <summary>
@@ -88,10 +91,21 @@ void Game::render()
 
 	m_window.setView(m_camera.m_view);
 	m_world.draw(m_window);
+	m_npc.draw(m_window);//remove
+
 
 
 	m_window.setView(m_window.getDefaultView());
 	m_menu.draw(m_window);
 
+=======
+
+
+
+
+	m_window.setView(m_camera.m_view);
+	m_cursor.draw(m_window);
+
+>>>>>>> Merging Player_branch and Master
 	m_window.display();
 }

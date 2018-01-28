@@ -10,6 +10,7 @@
 #include "Cursor.h"
 #include "Building.h"
 #include "House.h"
+#include "NPC.h"
 
 class Game
 {
@@ -24,7 +25,7 @@ private:
 	World m_world;
 	Menu m_menu;
 	Cursor m_cursor;
-
+	NPC m_npc;
 	void processEvents();
 	void update(sf::Time t_deltaTime);
 	void render();

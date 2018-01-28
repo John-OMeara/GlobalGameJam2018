@@ -43,6 +43,7 @@
       <Filter>Source Files</Filter>
     </ClCompile>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <ClCompile Include="Building.cpp">
       <Filter>Source Files</Filter>
@@ -51,6 +52,11 @@
       <Filter>Source Files</Filter>
     </ClCompile>
 >>>>>>> Added World class, Building super, and house sub class
+=======
+    <ClCompile Include="NPC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+>>>>>>> Merging Player_branch and Master
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -69,6 +75,7 @@
       <Filter>Header Files</Filter>
     </ClInclude>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <ClInclude Include="Building.h">
       <Filter>Header Files</Filter>
@@ -77,6 +84,11 @@
       <Filter>Header Files</Filter>
     </ClInclude>
 >>>>>>> Added World class, Building super, and house sub class
+=======
+    <ClInclude Include="NPC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+>>>>>>> Merging Player_branch and Master
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\..\..\..\pictures\SFML-LOGO.png">

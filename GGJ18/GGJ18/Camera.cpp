@@ -61,7 +61,6 @@ void Camera::update()
 
 	std::cout << "(" << m_position.x << ", " << m_position.y << ")" << std::endl;
 
-
 	if (m_shaking)
 	{
 		m_angle = m_maxAngle * m_shake * (((float)rand()) / RAND_MAX * 100.0 - 50.0);
